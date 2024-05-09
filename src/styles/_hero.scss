@@ -3,7 +3,7 @@
 .hero {
     padding-top: 64px;
     padding-bottom: 100px;
-    background-image: url(../images/fundo.png);
+    background-image: url(../images/fundo2.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -34,21 +34,43 @@
 
     &__logo {
         margin: 0 auto;
-        height: 80px;
+        height: 15%; /* Aumentado de 80px para 120px */
+        width: 15%;  /* Adicione a largura para manter as proporções, se necessário */
         display: block;
+        border-radius: 50%;
     }
 
+    @media (max-width:1024px) {
+        padding: 40px 0;
+
+        &__logo {
+            width: 20%;
+            height: 20%;
+        }
+
+        &__text {
+            font-size: 30px;
+            line-height: 46px;
+            margin: 24px 0;
+            font-weight: 800;
+            text-align: center;
+        }
+    }
+    
     @media (max-width:640px) {
         padding: 40px 0;
 
         &__logo {
-            height: 40px;
+            width: 35%;
+            height: 35%;
         }
 
         &__text {
-            font-size: 22px;
-            line-height: 24px;
+            font-size: 24px;
+            line-height: 34px;
             margin: 24px 0;
+            font-weight: 800;
+            text-align: center;
         }
     }
 }
